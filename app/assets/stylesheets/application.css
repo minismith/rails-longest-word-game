@@ -13,3 +13,21 @@
  *= require_tree .
  *= require_self
  */
+.link {
+  text-decoration: none;
+}
+
+.letter-div {
+  background-color: #3498DC;
+  margin: 0 15px;
+  padding: 18px 29px;
+  box-shadow: 5px 5px 5px grey;
+  color: white;
+  font-weight: bold;
+  font-family: monospace;
+  border: 1px solid black;
+}
+
+.letters {
+  display:flex;
+}

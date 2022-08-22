@@ -1,0 +1,15 @@
+<h1 class="my-3">Result</h1>
+
+<% if @dictionary_word["found"] && (@word_array - @letter_array).empty? %>
+  <p>Congratulations! <strong><%=@word.upcase%></strong> is a valid English word! Your score is: <%=@current_score%></p>
+<% elsif (@word_array - @letter_array).size > 1 &&  @dictionary_word["found"] %>
+  <p>Sorry but <strong><%=@word.upcase%></strong> does not seem to be a valid English word...</p>
+<% else %>
+  <p>Sorry but <strong><%=@word.upcase%></strong> isn't an English word or can't be built out of <%= @letters.gsub(" ", ", ") %></p>
+<% end %>
+
+<p>Total score: <%= session[:total_score] %></p>
+
+<div class="mt-3">
+  <%= link_to "Play again", new_path, class: "link" %>
+</div>
